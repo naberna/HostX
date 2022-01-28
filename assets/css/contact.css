@@ -1,0 +1,222 @@
+/* Header */
+.main-header {
+  padding: 80px 0;
+  background-color: rgba(2, 117, 200, 0.1);
+}
+
+/* title-1 & para-1 */
+.main-header .title-1 {
+  font-size: 62px;
+  font-weight: 900;
+  color: var(--primary);
+  line-height: 1.2;
+  max-width: 600px;
+}
+.main-header .para-1 {
+  font-size: 60px;
+  font-family: var(--secondary-font);
+  line-height: 1.6;
+  font-weight: 500;
+  color: var(--dark);
+  opacity: 0.8;
+  max-width: 600px;
+}
+@media only screen and (max-width: 767px) {
+  .main-header {
+    padding: 160px 0 60px;
+  }
+  .main-header .title-1 {
+    font-size: 44px;
+  }
+  .main-header .para-1 {
+    font-size: 24px;
+  }
+}
+
+/* header-form */
+.header-form {
+  position: relative;
+  background-color: rgba(2, 117, 200, 0.1);
+  border: 1px solid var(--primary);
+  padding: 60px 40px 40px;
+  text-align: center;
+  border-radius: 16px;
+}
+
+/* form-title */
+.form-title {
+  font-size: 22px;
+  line-height: 1.4;
+  color: var(--dark);
+  font-weight: 700;
+}
+
+/* form-label */
+.row.bottom:not(:last-child) {
+  margin-bottom: 15px;
+}
+.form-label {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.form-label:not(:last-child) {
+  margin-bottom: 15px;
+}
+.form-label input,
+.form-label textarea {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 54px;
+  padding: 0 20px;
+  background-color: rgba(2, 117, 200, 0.1);
+  border: 1px solid var(--dark);
+  overflow: hidden;
+  width: 100%;
+  border-radius: 4px;
+  font-size: 14px;
+  color: var(--dark);
+  font-family: var(--primary-font);
+  font-weight: 500;
+  outline: none;
+  transition: background-color 0.2s ease;
+}
+.form-label textarea {
+  padding-top: 15px;
+  height: 120px;
+}
+.form-label input:hover,
+.form-label textarea:hover {
+  background-color: rgba(2, 117, 200, 0.5);
+}
+.form-label input::placeholder,
+.form-label textarea::placeholder {
+  color: var(--dark);
+  font-weight: 400;
+}
+
+/* hr */
+.hr {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hr::before,
+.hr::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  height: 1px;
+  width: 100px;
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: 1;
+  margin-top: 1px;
+}
+.hr::after {
+  left: unset;
+  right: 0;
+}
+.hr span {
+  position: relative;
+  font-size: 14px;
+  color: var(--text-gray);
+  z-index: 2;
+}
+
+/* form-comment */
+.form-comment {
+  font-size: 12px;
+  color: var(--text-gray);
+}
+.form-comment a {
+  color: var(--primary);
+}
+.form-comment a:hover {
+  text-decoration: underline;
+}
+@media only screen and (max-width: 767px) {
+  .form-title {
+    font-size: 17px;
+  }
+}
+
+/* Form button */
+.form-btn {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 54px;
+  height: 54px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 2px solid rgba(255, 255, 255, 0);
+  box-shadow: 0 22px 20px -15px rgba(150, 150, 150, 0.2);
+  border-radius: 50%;
+  z-index: 99;
+}
+.form-btn:hover,
+.form-btn:active,
+.form-btn:focus {
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: none;
+}
+.form-btn img {
+  width: 20px;
+}
+@media only screen and (max-width: 1199.98px) {
+    .py-90 {
+        padding: 0;
+    }
+  .form-btn {
+    display: flex;
+    z-index: 999;
+  }
+  .form-container {
+    width: 100%;
+  }
+  .form-container.open {
+    right: 0;
+    visibility: visible;
+  }
+}
+@media only screen and (max-width: 1366px) {
+  .hr::before,
+  .hr::after {
+    width: 75px;
+  }
+}
+@media only screen and (max-width: 767px) {
+    .form-label input.name {
+        margin-bottom: 15px;
+    }
+  .form-container {
+    padding: 60px 15px 100px;
+    width: 100%;
+  }
+  .header-form {
+    max-width: 380px;
+    width: calc(100% - 30px);
+    padding: 70px 30px 30px;
+    margin: 0 auto;
+  }
+}
+@media only screen and (max-width: 389px) {
+  .form-container {
+    padding: 60px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .form-container.open {
+    right: 0;
+  }
+  .header-form {
+    max-width: 340px;
+    width: 340px;
+    padding: 70px 30px 30px;
+  }
+}
